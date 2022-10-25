@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="flex lg:flex-row sm:flex-col mt-10 w-9/12 mx-auto justify-evenly">
       <div className="lg:w-1/2 sm:w-full">
-        <div className="px-10 shadow-2xl">
+        <div className="mx-10 shadow-2xl">
           <Card
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={home}

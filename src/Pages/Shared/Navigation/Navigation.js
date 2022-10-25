@@ -21,7 +21,7 @@ const Navigation = () => {
         <Navbar.Brand href="">
           <img src={logo} alt="" />
           <span className=" mx-2 self-center whitespace-nowrap font-semibold text-2xl text-blue-500">
-            Bit Masters
+            <Link to="/">Bit Masters</Link>
           </span>
         </Navbar.Brand>
 
