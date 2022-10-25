@@ -36,7 +36,7 @@ const Navigation = () => {
         </Navbar.Collapse>
         {!user ? (
           <>
-            <div className="flex">
+            <div className="flex ">
               <Link to={"/login"}>
                 <button
                   type="button"
@@ -66,8 +66,10 @@ const Navigation = () => {
                 inline={true}
                 label={
                   <Avatar
+                    data-tooltip-target="tooltip-default"
                     alt={<FaUser></FaUser>}
                     img={user?.photoURL}
+                    title={user?.displayName}
                     rounded={true}
                   />
                 }
