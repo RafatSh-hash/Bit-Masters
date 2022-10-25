@@ -5,6 +5,7 @@ import ParticlesBg from "particles-bg";
 import { AuthContext } from "../../Context/UserContext";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Swal from "sweetalert2";
 
 const Registration = () => {
   AOS.init({ duration: 500 });
@@ -23,6 +24,7 @@ const Registration = () => {
         const user = result.user;
         console.log(user);
         form.reset();
+        Swal.fire("Successfully Registered!!");
         handleUpdateUser(name, photoURL);
       })
       .catch((error) => {

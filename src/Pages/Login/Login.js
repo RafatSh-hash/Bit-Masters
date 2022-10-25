@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { FaGithub } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Login = () => {
   AOS.init({ duration: 500 });
@@ -31,6 +32,7 @@ const Login = () => {
         const currentUser = result.user;
         console.log(currentUser);
         setUser(currentUser);
+        Swal.fire("Successfully Logged In With Email & Password!");
         navigate(from, { replace: true });
 
         form.reset();
@@ -45,6 +47,7 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         console.log(currentUser);
+        Swal.fire("Successfully Logged In With GitHub! ");
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -57,6 +60,7 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         console.log(currentUser);
+        Swal.fire("Successfully Logged In With GitHub!");
         navigate(from, { replace: true });
       })
       .catch((error) => {
