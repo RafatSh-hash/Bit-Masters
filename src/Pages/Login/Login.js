@@ -3,13 +3,20 @@ import Lottie from "lottie-react";
 import login from "../../Assets/login.json";
 import ParticlesBg from "particles-bg";
 import { AuthContext } from "../../Context/UserContext";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
   AOS.init({ duration: 500 });
-  const { createGoogleUser, signIn, setUser } = useContext(AuthContext);
+  const {
+    createGoogleUser,
+    createGitUser,
+
+    signIn,
+    setUser,
+  } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
@@ -35,6 +42,18 @@ const Login = () => {
 
   const googleLogin = () => {
     createGoogleUser()
+      .then((result) => {
+        const currentUser = result.user;
+        console.log(currentUser);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const gitSignIn = () => {
+    createGitUser()
       .then((result) => {
         const currentUser = result.user;
         console.log(currentUser);
@@ -125,27 +144,22 @@ const Login = () => {
                 <span className="ml-3 text-center"> Google</span>
               </button>
               <button
+                onClick={gitSignIn}
                 type="button"
-                className="text-white w-1/2 bg-black hover:bg-white hover:text-black focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-6 py-2.5 text-center inline-flex items-center shadow-lg shadow-gray-500/50 dark:shadow-lg  text-white mr-2 mb-2"
+                className=" w-1/2 bg-black hover:bg-white hover:text-black focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-6 py-2.5 text-center inline-flex items-center shadow-lg shadow-gray-500/50 dark:shadow-lg  text-white mr-2 mb-2"
               >
-                <svg
-                  className="mr-2 -ml-1 w-4 h-4"
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fab"
-                  data-icon="facebook-f"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 320 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M279.1 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.4 0 225.4 0c-73.22 0-121.1 44.38-121.1 124.7v70.62H22.89V288h81.39v224h100.2V288z"
-                  ></path>
-                </svg>
+                <FaGithub></FaGithub>
                 <span className="ml-3 text-center"> GitHub</span>
               </button>
             </div>
+            <p className="text-center">
+              <small>
+                New Here?
+                <span className="text-blue-500 ">
+                  <Link to={"/register"}> Please Register</Link>
+                </span>
+              </small>
+            </p>
           </form>
         </div>
       </div>

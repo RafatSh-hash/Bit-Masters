@@ -3,12 +3,12 @@ import Lottie from "lottie-react";
 import registration from "../../Assets/registration.json";
 import ParticlesBg from "particles-bg";
 import { AuthContext } from "../../Context/UserContext";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const Registration = () => {
-  AOS.init({ duration : 500});
-  const { createEmailUser } = useContext(AuthContext);
+  AOS.init({ duration: 500 });
+  const { createEmailUser, updateUserProfile } = useContext(AuthContext);
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -18,15 +18,28 @@ const Registration = () => {
     const photoURL = form.photoURL.value;
     const password = form.password.value;
     console.log(email, password, name, photoURL);
-    createEmailUser(email, password, )
+    createEmailUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
         form.reset();
+        handleUpdateUser(name, photoURL);
       })
       .catch((error) => {
         console.log(error);
       });
+
+    const handleUpdateUser = (name, photoURL) => {
+      const profile = {
+        displayName: name,
+        photoURL: photoURL,
+      };
+      updateUserProfile(profile)
+        .then(() => {})
+        .catch((e) => {
+          console.log(e);
+        });
+    };
   };
   return (
     <div>
