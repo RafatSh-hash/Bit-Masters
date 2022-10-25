@@ -50,7 +50,8 @@ const Blog = () => {
           service, it also gives you access to other Google products and
           features, like Google Drive and Sheets. For instance, you can import
           dummy data from Google Sheets and use it temporarily to serve your
-          app.
+          app. Some other options we have for authentication are : 1.
+          Backendless 2. Puzzle 3. Pubnub 4. Kumulos 5. Appwrite
         </p>
       </div>
       <div className="border-2 border-slate-400 shadow-gray-600 shadow-lg rounded-2xl p-4 text-left w-4/6 mx-auto mt-10">
