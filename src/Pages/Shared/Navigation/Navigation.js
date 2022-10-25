@@ -61,36 +61,30 @@ const Navigation = () => {
         ) : (
           <>
             <div className="flex">
-              <Dropdown
-                arrowIcon={false}
-                inline={true}
-                label={
-                  <Avatar
-                    data-tooltip-target="tooltip-default"
-                    alt={<FaUser></FaUser>}
-                    img={user?.photoURL}
-                    title={user?.displayName}
-                    rounded={true}
-                  />
-                }
-              >
-                <Dropdown.Item className="border border-blue-600">
-                  <span className="block text-sm">
-                    {user ? <>{user.displayName}</> : <>No User Found</>}
-                  </span>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Link to={""}>
-                    <button
-                      onClick={getOut}
-                      type="button"
-                      class="text-white w-full mx-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2 "
-                    >
-                      Log Out
-                    </button>
-                  </Link>
-                </Dropdown.Item>
-              </Dropdown>
+              <Link className="mr-3" to={""}>
+                <button
+                  onClick={getOut}
+                  type="button"
+                  class="text-white w-full mx-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2 "
+                >
+                  Log Out
+                </button>
+              </Link>
+              <Link to="/userDetails">
+                <Dropdown
+                  arrowIcon={false}
+                  inline={true}
+                  label={
+                    <Avatar
+                      data-tooltip-target="tooltip-default"
+                      alt={<FaUser></FaUser>}
+                      img={user?.photoURL}
+                      title={user?.displayName}
+                      rounded={true}
+                    />
+                  }
+                ></Dropdown>
+              </Link>
             </div>
           </>
         )}
