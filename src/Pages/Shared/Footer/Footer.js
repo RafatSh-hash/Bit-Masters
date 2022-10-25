@@ -3,7 +3,7 @@ import logo from "./logo.ico";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-20">
       <footer class="p-4 bg-blue-900 sm:p-6 dark:bg-gray-900">
         <div class="md:flex md:justify-evenly">
           <div class="mb-6 md:mb-0">

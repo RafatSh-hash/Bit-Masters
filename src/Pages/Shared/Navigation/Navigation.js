@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Context/UserContext";
 import { FaUser } from "react-icons/fa";
 import logo from "./logo.ico";
+import Swal from "sweetalert2";
 const Navigation = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const getOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => {
+        Swal.fire("You Signed Out!");
+      })
       .catch((e) => {
         console.log(e);
       });

@@ -6,6 +6,7 @@ import { AuthContext } from "../../Context/UserContext";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import Swal from "sweetalert2";
+import { Toast } from "flowbite-react";
 
 const Registration = () => {
   AOS.init({ duration: 500 });
@@ -19,6 +20,20 @@ const Registration = () => {
     const photoURL = form.photoURL.value;
     const password = form.password.value;
     console.log(email, password, name, photoURL);
+    if (password.length < 6) {
+      Swal.fire("Password should be 6 characters or more! Try Again");
+      return;
+    } else if (!/(?=.*[A-Z])/.test(password)) {
+      Swal.fire("Password Must Contain Atleast One Upper Case Character");
+      return;
+    } else if (!/(?=.*?[0-9])/.test(password)) {
+      Swal.fire("Password Must Contain a numeric value");
+      return;
+    } else if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+      Swal.fire("Password Must Contain a special Character");
+      return;
+    }
+
     createEmailUser(email, password)
       .then((result) => {
         const user = result.user;

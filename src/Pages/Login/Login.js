@@ -47,7 +47,7 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         console.log(currentUser);
-        Swal.fire("Successfully Logged In With GitHub! ");
+        Swal.fire("Successfully Logged In With Google! ");
         navigate(from, { replace: true });
       })
       .catch((error) => {
