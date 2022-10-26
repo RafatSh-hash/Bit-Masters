@@ -33,7 +33,7 @@ const Home = () => {
           </Card>
         </div>
       </div>
-      <div className="lg:w-1/2 sm:w-full py-12 text-5xl">
+      <div className="lg:w-1/2 sm:w-full py-12 text-4xl">
         <Typewriter
           options={{
             strings: [
