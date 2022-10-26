@@ -22,7 +22,7 @@ const Home = () => {
               Here are the biggest enterprise technology acquisitions of 2021 so
               far, in reverse chronological order.
             </p>
-            <Link>
+            <Link to={"/courses"}>
               <Button gradientDuoTone="purpleToBlue">
                 Take A Tour
                 <span className="px-2">

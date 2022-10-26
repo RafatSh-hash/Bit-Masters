@@ -32,10 +32,11 @@ const Navigation = () => {
           <Link to="/home" active={true}>
             Home
           </Link>
-          <Link to="/about">About</Link>
+
           <Link to="/courses">Courses</Link>
           <Link to="/services">Services</Link>
           <Link to="/blog">Blog</Link>
+          <Link to="/about">FAQ</Link>
         </Navbar.Collapse>
         {!user ? (
           <>

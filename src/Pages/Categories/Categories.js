@@ -43,7 +43,7 @@ const Categories = () => {
                 to={`/category/${category.CatID}`}
                 className="inline-flex mt-5 items-center absolute bottom-2 w-11/12 left-0 right-0 mx-3 py-3 px-3 text-lg font-semibold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-                <div className="flex justify-center w-auto mx-auto">
+                <div className="flex justify-center w-auto h-8 items-center mx-auto">
                   <span className="text-center">Our Courses</span>
                   <span className="mx-3">
                     <FaArrowRight></FaArrowRight>

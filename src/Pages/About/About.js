@@ -1,6 +1,5 @@
 import { Accordion } from "flowbite-react";
 import React from "react";
-import ParticlesBg from "particles-bg";
 
 const About = () => {
   return (
