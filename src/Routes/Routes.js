@@ -2,6 +2,9 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Main/Main";
 import Blog from "../Pages/Blog/Blog";
+import Categories from "../Pages/Categories/Categories";
+import Courses from "../Pages/Courses/Courses";
+
 import Error from "../Pages/Error/Error";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -32,6 +35,18 @@ export const routes = createBrowserRouter([
         element: <Registration></Registration>,
       },
       {
+        path: "/courses",
+        element: <Categories></Categories>,
+      },
+
+      {
+        path: "/category/:CatID",
+        element: <Courses></Courses>,
+        loader: async ({ params }) => {
+          return fetch(`http://localhost:5000/category/${params.CatID}`);
+        },
+      },
+      {
         path: "/blog",
         element: <Blog></Blog>,
       },
@@ -39,6 +54,7 @@ export const routes = createBrowserRouter([
         path: "/userDetails",
         element: <UserDetails></UserDetails>,
       },
+
       {
         path: "/services",
         element: (

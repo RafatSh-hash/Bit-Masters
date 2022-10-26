@@ -33,8 +33,8 @@ const Navigation = () => {
             Home
           </Link>
           <Link to="/navbars">About</Link>
+          <Link to="/courses">Courses</Link>
           <Link to="/services">Services</Link>
-          <Link to="/navbars">Categories</Link>
           <Link to="/blog">Blog</Link>
         </Navbar.Collapse>
         {!user ? (
