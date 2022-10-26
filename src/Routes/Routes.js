@@ -4,6 +4,7 @@ import Main from "../Main/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Categories from "../Pages/Categories/Categories";
+import CheckOut from "../Pages/CheckOut/CheckOut";
 import Courses from "../Pages/Courses/Courses";
 
 import Error from "../Pages/Error/Error";
@@ -60,12 +61,11 @@ export const routes = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: "/services",
-        element: (
-          <PrivateRoute>
-            <Services></Services>
-          </PrivateRoute>
-        ),
+        path: "/course/:id",
+        loader: async ({ params }) => {
+          return fetch(`http://localhost:5000/course/${params.id}`);
+        },
+        element: <CheckOut></CheckOut>,
       },
       {
         path: "*",
