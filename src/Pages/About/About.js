@@ -3,6 +3,8 @@ import React from "react";
 
 const About = () => {
   return (
+    //this is the FAQ page where also you can know about the company
+    //ques and answers are set in an accordion
     <div className="bg-gradient-to-r from-neutral-200 via-gray-100 to-slate-300  py-20">
       <div className="w-11/12 mt-14 mx-auto border-2 border-gray-700 rounded-lg">
         <p className="text-2xl my-10 text-blue-600 text-center">
@@ -13,10 +15,10 @@ const About = () => {
         <Accordion alwaysOpen={true}>
           <Accordion.Panel>
             <Accordion.Title>
-              <span className="font-bold">Who are we ?</span>
+              <span className="font-bold text-blue-500">Who are we ?</span>
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              <p className="mb-2 text-black dark:text-white">
                 We are Bit Masters, and our goal is to encourage and teach mass
                 students about technology. Third world is highly competetive and
                 there is no place for those who dont have anything to do with
@@ -27,10 +29,12 @@ const About = () => {
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title>
-              <span className="font-bold">Who should you choose us ?</span>
+              <span className="font-bold text-blue-500">
+                Who should you choose us ?
+              </span>
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              <p className="mb-2 text-black dark:text-white">
                 It’s no secret that we work harder, better, and longer when we
                 enjoy the work, and what employer wouldn’t want that dedication
                 from their staff? But it’s your responsibility to make that
@@ -44,12 +48,12 @@ const About = () => {
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title>
-              <span className="font-bold">
+              <span className="font-bold text-blue-500">
                 Are the students being teached the way the should be teached ?
               </span>
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              <p className="mb-2 text-black dark:text-white">
                 This question reveals whether you researched the school and
                 district. Conducting thorough research about the student body,
                 how the community views the school, test scores and other
@@ -71,12 +75,12 @@ const About = () => {
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title>
-              <span className="font-bold">
+              <span className="font-bold text-blue-500">
                 What are the payment options available?
               </span>
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              <p className="mb-2 text-black dark:text-white">
                 Our Payment Systems Are :
                 <ul>
                   <li>Rocket</li>
@@ -97,12 +101,12 @@ const About = () => {
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title>
-              <span className="font-bold">
+              <span className="font-bold text-blue-500">
                 How much effort is enough to finish the a course successfully?
               </span>
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              <p className="mb-2 text-black dark:text-white">
                 The parameter of effort depends on the place you wanna see
                 yourself after a certain period of time. Its not about how much
                 you learn, its about how well you learn. So success is
@@ -113,12 +117,12 @@ const About = () => {
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title>
-              <span className="font-bold">
+              <span className="font-bold text-blue-500">
                 How can I find the curriculum before enrolling the course?
               </span>
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
+              <p className="mb-2 text-black dark:text-white">
                 After enrolling the course you will receive an email, an the
                 details will be shared with you there.
               </p>
@@ -128,7 +132,7 @@ const About = () => {
 
         <p className="text-center mt-10">
           For further query contact us on
-          <span className="text-blue-500 text-small">
+          <span className="text-blue-500 mx-3 text-small">
             bitmaster.portal@gmail.com
           </span>
         </p>

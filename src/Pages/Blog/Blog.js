@@ -1,8 +1,9 @@
 import React from "react";
 
 const Blog = () => {
+  //Blog Page Ques And Answers
   return (
-    <div className="bg-gray-200  p-5 mt-0">
+    <div className="bg-gray-200 bg-gradient-to-t from-sky-300 via-cyan-100 to-neutral-100  p-5 mt-0">
       {/* <h1>Hello Blog</h1> */}
       <div className="border-2 border-slate-400 shadow-gray-600 shadow-lg rounded-2xl p-4 text-left w-4/6 mx-auto mt-10">
         <h3 className="font-semibold ">

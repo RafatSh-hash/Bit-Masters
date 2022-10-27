@@ -11,13 +11,21 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   AOS.init({ duration: 500 });
+  //importing functions from auth Context
   const { createGoogleUser, createGitUser, resetPassword, signIn, setUser } =
     useContext(AuthContext);
+  //set state for user
   const [userEmail, setUserEmail] = useState("");
+  //getting location for private Route
   const location = useLocation();
+  //importing useNavigate function
   const navigate = useNavigate();
+
+  //getting the location pathname
   const from = location.state?.from?.pathname || "/";
+  //login by email password
   const handleLogin = (event) => {
+    //prevent the default behaviour of form
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
@@ -37,6 +45,7 @@ const Login = () => {
         console.log(error);
       });
   };
+  //google signIn
 
   const googleLogin = () => {
     createGoogleUser()
@@ -51,6 +60,7 @@ const Login = () => {
       });
   };
 
+  //sending password reset email
   const handleEmailBlur = (event) => {
     const email = event.target.value;
     setUserEmail(email);
@@ -63,6 +73,7 @@ const Login = () => {
       });
   };
 
+  //github sign in
   const gitSignIn = () => {
     createGitUser()
       .then((result) => {

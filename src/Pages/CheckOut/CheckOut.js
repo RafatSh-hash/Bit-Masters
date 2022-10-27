@@ -1,11 +1,13 @@
+import { Button } from "flowbite-react";
 import React, { useRef } from "react";
 import { FaFileDownload, FaRegBookmark } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 const CheckOut = () => {
+  //recieving the data by useLoaderdata after sending the data from the route
   const data = useLoaderData();
 
-  console.log(data);
+  // Creating function for PDF download
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -47,9 +49,9 @@ const CheckOut = () => {
                     {" "}
                     Course Duration: {data.duration}
                   </div>
-                  <button className="bg-green-400 hover:bg-green-300 rounded-md p-4 my-2">
-                    Buy Now
-                  </button>
+                  <div className="w-60">
+                    <Button gradientMonochrome="success">Buy Now</Button>
+                  </div>
                 </div>
               </div>
             </div>

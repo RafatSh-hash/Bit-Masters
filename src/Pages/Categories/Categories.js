@@ -2,10 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Courses from "../Courses/Courses";
 import { FaArrowRight } from "react-icons/fa";
+import AOS from "aos";
+import ParticlesBg from "particles-bg";
 
 const Categories = () => {
+  AOS.init({ duration: 500 });
+
+  //setting state for categories
   const [categories, setCategories] = useState([]);
 
+  //loading the data with useEffect Hook
   useEffect(() => {
     fetch("http://localhost:5000/catagories")
       .then((res) => res.json())
@@ -17,7 +23,10 @@ const Categories = () => {
       <p className="text-center text-4xl my-10">
         We provide courses of {categories.length} categories
       </p>
-      <div className="flex flex-wrap justify-evenly gap-x-10 gap-y-14">
+      <div
+        data-aos="zoom-in-up"
+        className="flex flex-wrap justify-evenly gap-x-10 gap-y-14"
+      >
         {categories.map((category) => (
           <div className="max-w-sm bg-white rounded-lg border h-[26rem] w-[30rem] border-gray-200 relative shadow-md dark:bg-gray-800 dark:border-gray-700">
             <img
@@ -54,6 +63,7 @@ const Categories = () => {
           </div>
         ))}
       </div>
+      <ParticlesBg type="cobweb" bg={true} />
     </div>
   );
 };

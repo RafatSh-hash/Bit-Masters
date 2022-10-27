@@ -13,6 +13,7 @@ const Error = () => {
           Sorry! Something must've went Wrong!
         </p>
         <div className="mt-5 w-32 mx-auto">
+          {/* Back to Home Button */}
           <Link to={"/home"}>
             <button
               type="button"

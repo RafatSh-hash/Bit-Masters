@@ -20,6 +20,8 @@ const Registration = () => {
     const photoURL = form.photoURL.value;
     const password = form.password.value;
     console.log(email, password, name, photoURL);
+
+    //password validation
     if (password.length < 6) {
       Swal.fire("Password should be 6 characters or more! Try Again");
       return;
@@ -33,7 +35,7 @@ const Registration = () => {
       Swal.fire("Password Must Contain a special Character");
       return;
     }
-
+    //create user
     createEmailUser(email, password)
       .then((result) => {
         const user = result.user;

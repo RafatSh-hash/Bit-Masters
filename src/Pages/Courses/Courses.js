@@ -4,9 +4,12 @@ import { Link, useLoaderData } from "react-router-dom";
 import Course from "../Course/Course";
 
 const Courses = ({ params }) => {
+  //gettinh the loaderData as courses
   const courses = useLoaderData(params);
 
   const [categories, setCategories] = useState([]);
+
+  //using useEffect for retrieving data
   useEffect(() => {
     fetch("http://localhost:5000/catagories")
       .then((res) => res.json())
@@ -14,7 +17,7 @@ const Courses = ({ params }) => {
   });
 
   return (
-    <div>
+    <div className="bg-gradient-to-t from-sky-300 via-cyan-100 to-neutral-100 ">
       <div className="flex lg:flex-row  sm:flex-col justify-evenly lg:w-11/12 mx-auto flex-row mt-10">
         {categories.map((category) => (
           <div>
