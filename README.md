@@ -17,4 +17,10 @@ Description </br>
 
 --> You can create an account by email/password or Google or GitHub as per your liking. </br>
 
---> FAQ page displays some common ques with answers about the website, and the blog page holds some ques and answers.
+--> FAQ page displays some common ques with answers about the website, and the blog page holds some ques and answers.</br>
+
+Used technologies in my project: </br>
+
+--> Tailwind (Framework)</br>
+
+--> Flowbite (UI Library)</br>
