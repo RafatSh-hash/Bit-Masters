@@ -121,16 +121,19 @@ const Navigation = () => {
                   }
                 ></Dropdown>
               </Link>
+              <div className="mx-3">
+                <Flowbite>
+                  <DarkThemeToggle
+                    onChange={setIsDark}
+                    checked={isDark}
+                    size={27}
+                  ></DarkThemeToggle>
+                </Flowbite>
+              </div>
             </div>
           </>
         )}
-        <Flowbite>
-          <DarkThemeToggle
-            onChange={setIsDark}
-            checked={isDark}
-            size={30}
-          ></DarkThemeToggle>
-        </Flowbite>
+
         <Navbar.Toggle />
       </Navbar>
     </div>

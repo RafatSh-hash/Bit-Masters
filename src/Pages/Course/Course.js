@@ -12,15 +12,6 @@ const Course = (props) => {
   return (
     <div className="mt-9 w-80 h-[32rem] shadow-xl shadow-gray-800 p-4 relative rounded-lg">
       <div className="h-full max-w-sm rounded overflow-hidden shadow-lg">
-        <div className="flex w-full justify-between py-2 px-2">
-          <button>
-            <FaRegBookmark></FaRegBookmark>
-          </button>
-          <button>
-            <FaFileDownload></FaFileDownload>
-          </button>
-        </div>
-        <hr />
         <img className="w-full rounded-lg h-2/6" src={logo} alt={logo} />
         <div className="h-3/6 px-6 py-4 ">
           <div className="font-bold text-xl mb-2 ">{name}</div>
