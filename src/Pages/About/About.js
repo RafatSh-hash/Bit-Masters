@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-r from-neutral-400 via-gray-100 to-slate-100  py-20">
+    <div className="bg-gradient-to-r from-neutral-200 via-gray-100 to-slate-300  py-20">
       <div className="w-11/12 mt-14 mx-auto border-2 border-gray-700 rounded-lg">
         <p className="text-2xl my-10 text-blue-600 text-center">
           Here are answer to some common questions you might seek answer before
@@ -17,20 +17,11 @@ const About = () => {
             </Accordion.Title>
             <Accordion.Content>
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Flowbite is an open-source library of interactive components
-                built on top of Tailwind CSS including buttons, dropdowns,
-                modals, navbars, and more.
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                Check out this guide to learn how to{" "}
-                <a
-                  href="https://flowbite.com/docs/getting-started/introduction/"
-                  className="text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  get started
-                </a>
-                and start developing websites even faster with components on top
-                of Tailwind CSS.
+                We are Bit Masters, and our goal is to encourage and teach mass
+                students about technology. Third world is highly competetive and
+                there is no place for those who dont have anything to do with
+                technology. Bit Masters team are always working for the growth
+                of the knowledge of the students.
               </p>
             </Accordion.Content>
           </Accordion.Panel>
@@ -40,20 +31,14 @@ const About = () => {
             </Accordion.Title>
             <Accordion.Content>
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Flowbite is first conceptualized and designed using the Figma
-                software so everything you see in the library has a design
-                equivalent in our Figma file.
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                Check out the{" "}
-                <a
-                  href="https://flowbite.com/figma/"
-                  className="text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  Figma design system
-                </a>{" "}
-                based on the utility classes from Tailwind CSS and components
-                from Flowbite.
+                It’s no secret that we work harder, better, and longer when we
+                enjoy the work, and what employer wouldn’t want that dedication
+                from their staff? But it’s your responsibility to make that
+                connection between job and joy clear. That connection can be as
+                simple as “X is something I enjoy,” but expressing how or why
+                you enjoy it makes that point even more valuable and memorable.
+                We are bound to accomplish our goals and enlighten the socity no
+                matter what.
               </p>
             </Accordion.Content>
           </Accordion.Panel>
@@ -65,39 +50,23 @@ const About = () => {
             </Accordion.Title>
             <Accordion.Content>
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
+                This question reveals whether you researched the school and
+                district. Conducting thorough research about the student body,
+                how the community views the school, test scores and other
+                aspects of the school district shows you're serious about the
+                position. When answering this question, demonstrate your
+                knowledge of both the school and its district. Explain why this
+                information enhances your interest in the institution. A strong
+                answer could include information about recent test scores,
+                specific programs or awards earned by the school. Example
+                answer: “I am inspired by this school’s reputation for
+                educational excellence and for encouraging creativity through
+                its renowned arts program. I note there has been a dip in the AP
+                test scores in recent years, so I am extremely motivated to
+                introduce my teaching strategies. I feel confident that I could
+                help students improve their scores and opportunities for
+                success.”
               </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
-              </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
@@ -108,39 +77,22 @@ const About = () => {
             </Accordion.Title>
             <Accordion.Content>
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
+                Our Payment Systems Are :
+                <ul>
+                  <li>Rocket</li>
+                  <li>Nagad</li>
+                  <li>Bkash</li>
+                  <li>Master Card</li>
+                  <li>Visa Card</li>
+                  <li>Paypal</li>
+                  <li>Google Pay</li>
+                  <li>Apple Pay</li>
+                  <li>Mtp</li>
+                  <li>You Pay</li>
+                  <li>Tap Tap Sent</li>
+                  <li>UPay</li>
+                </ul>
               </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
-              </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
@@ -151,82 +103,25 @@ const About = () => {
             </Accordion.Title>
             <Accordion.Content>
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
+                The parameter of effort depends on the place you wanna see
+                yourself after a certain period of time. Its not about how much
+                you learn, its about how well you learn. So success is
+                determined to those who are bound with three P's. Practice,
+                Practice & Practice
               </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
-              </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
             <Accordion.Title>
               <span className="font-bold">
-                How can I find the carriculam before enrolling the course?
+                How can I find the curriculum before enrolling the course?
               </span>
             </Accordion.Title>
             <Accordion.Content>
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
+                After enrolling the course you will receive an email, an the
+                details will be shared with you there.
               </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
-              </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
             </Accordion.Content>
           </Accordion.Panel>
         </Accordion>
