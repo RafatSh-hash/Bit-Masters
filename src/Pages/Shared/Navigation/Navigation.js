@@ -1,12 +1,20 @@
-import { Avatar, Dropdown, Navbar } from "flowbite-react";
+import {
+  Avatar,
+  DarkThemeToggle,
+  Dropdown,
+  Flowbite,
+  Navbar,
+} from "flowbite-react";
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Context/UserContext";
 import { FaUser } from "react-icons/fa";
 import logo from "./logo.ico";
 import Swal from "sweetalert2";
+import DarkModeToggle from "react-dark-mode-toggle";
 const Navigation = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [isDark, setIsDark] = useState(() => false);
   const [navbar, setNavbar] = useState(false);
   let activeStyle = {
     color: "red",
@@ -61,6 +69,7 @@ const Navigation = () => {
             FAQ
           </NavLink>
         </Navbar.Collapse>
+
         {!user ? (
           <>
             <div className="flex ">
@@ -115,6 +124,13 @@ const Navigation = () => {
             </div>
           </>
         )}
+        <Flowbite>
+          <DarkThemeToggle
+            onChange={setIsDark}
+            checked={isDark}
+            size={30}
+          ></DarkThemeToggle>
+        </Flowbite>
         <Navbar.Toggle />
       </Navbar>
     </div>
