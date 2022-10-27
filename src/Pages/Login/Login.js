@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import login from "../../Assets/login.json";
 import ParticlesBg from "particles-bg";
@@ -11,13 +11,9 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   AOS.init({ duration: 500 });
-  const {
-    createGoogleUser,
-    createGitUser,
-
-    signIn,
-    setUser,
-  } = useContext(AuthContext);
+  const { createGoogleUser, createGitUser, resetPassword, signIn, setUser } =
+    useContext(AuthContext);
+  const [userEmail, setUserEmail] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
@@ -55,6 +51,18 @@ const Login = () => {
       });
   };
 
+  const handleEmailBlur = (event) => {
+    const email = event.target.value;
+    setUserEmail(email);
+  };
+  const resetThePassword = () => {
+    resetPassword(userEmail)
+      .then(() => {})
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   const gitSignIn = () => {
     createGitUser()
       .then((result) => {
@@ -87,6 +95,7 @@ const Login = () => {
                 name="email"
                 type="email"
                 id="email"
+                onBlur={handleEmailBlur}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="name@flowbite.com"
                 required
@@ -104,6 +113,14 @@ const Login = () => {
                 required
               />
             </div>
+            <small className="flex mx-4 mb-5">
+              <p>
+                Forgot Passcode?
+                <button type="submit" onClick={resetThePassword}>
+                  <Link> Reset Your Password</Link>
+                </button>
+              </p>
+            </small>
             <div className="flex items-start mb-6">
               <div className="flex items-center h-5">
                 <input

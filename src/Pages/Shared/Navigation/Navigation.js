@@ -1,12 +1,16 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Context/UserContext";
 import { FaUser } from "react-icons/fa";
 import logo from "./logo.ico";
 import Swal from "sweetalert2";
 const Navigation = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [navbar, setNavbar] = useState(false);
+  let activeStyle = {
+    color: "red",
+  };
 
   const getOut = () => {
     logOut()
@@ -29,14 +33,33 @@ const Navigation = () => {
         </Navbar.Brand>
 
         <Navbar.Collapse>
-          <Link to="/home" active={true}>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to="/home"
+            active={true}
+          >
             Home
-          </Link>
+          </NavLink>
 
-          <Link to="/courses">Courses</Link>
-          <Link to="/checkout">Checkout</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/about">FAQ</Link>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to="/courses"
+          >
+            Courses
+          </NavLink>
+
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to="/blog"
+          >
+            Blog
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            to="/about"
+          >
+            FAQ
+          </NavLink>
         </Navbar.Collapse>
         {!user ? (
           <>
