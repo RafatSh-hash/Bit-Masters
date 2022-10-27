@@ -44,7 +44,9 @@ export const routes = createBrowserRouter([
         path: "/category/:CatID",
         element: <Courses></Courses>,
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/category/${params.CatID}`);
+          return fetch(
+            `https://node-server-xi.vercel.app/category/${params.CatID}`
+          );
         },
       },
       {
@@ -66,7 +68,7 @@ export const routes = createBrowserRouter([
       {
         path: "/course/:id",
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/course/${params.id}`);
+          return fetch(`https://node-server-xi.vercel.app/course/${params.id}`);
         },
         element: (
           <PrivateRoute>

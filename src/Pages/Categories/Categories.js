@@ -13,7 +13,7 @@ const Categories = () => {
 
   //loading the data with useEffect Hook
   useEffect(() => {
-    fetch("http://localhost:5000/catagories")
+    fetch("https://node-server-xi.vercel.app/catagories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   });

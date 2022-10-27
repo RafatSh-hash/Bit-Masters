@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import registration from "../../Assets/registration.json";
 import ParticlesBg from "particles-bg";
@@ -9,9 +9,8 @@ import Swal from "sweetalert2";
 
 const Registration = () => {
   AOS.init({ duration: 500 });
-  const { createEmailUser, updateUserProfile, verifyEmail } =
-    useContext(AuthContext);
-
+  const { createEmailUser, updateUserProfile } = useContext(AuthContext);
+  const [error, setError] = useState("");
   const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -35,6 +34,7 @@ const Registration = () => {
       Swal.fire("Password Must Contain a special Character");
       return;
     }
+
     //create user
     createEmailUser(email, password)
       .then((result) => {
@@ -47,6 +47,7 @@ const Registration = () => {
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
       });
 
     const handleUpdateUser = (name, photoURL) => {
@@ -78,7 +79,7 @@ const Registration = () => {
                 name="name"
                 type="text"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="John Doe"
+                placeholder="Full Name"
                 required=""
               />
             </div>
@@ -130,6 +131,7 @@ const Registration = () => {
                   required=""
                 />
               </div>
+              <p className="text-red-600">{error}</p>
               <label className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Remember me
               </label>

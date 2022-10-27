@@ -20,6 +20,7 @@ const Login = () => {
   const location = useLocation();
   //importing useNavigate function
   const navigate = useNavigate();
+  const [error, setError] = useState("");
 
   //getting the location pathname
   const from = location.state?.from?.pathname || "/";
@@ -43,6 +44,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
       });
   };
   //google signIn
@@ -57,6 +59,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
       });
   };
 
@@ -84,6 +87,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
       });
   };
 
@@ -132,6 +136,7 @@ const Login = () => {
                 </button>
               </p>
             </small>
+            <p className="text-red-600">{error}</p>
             <div className="flex items-start mb-6">
               <div className="flex items-center h-5">
                 <input
