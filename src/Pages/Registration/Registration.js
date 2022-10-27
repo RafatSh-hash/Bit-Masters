@@ -6,11 +6,11 @@ import { AuthContext } from "../../Context/UserContext";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import Swal from "sweetalert2";
-import { Toast } from "flowbite-react";
 
 const Registration = () => {
   AOS.init({ duration: 500 });
-  const { createEmailUser, updateUserProfile } = useContext(AuthContext);
+  const { createEmailUser, updateUserProfile, verifyEmail } =
+    useContext(AuthContext);
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -40,6 +40,7 @@ const Registration = () => {
         console.log(user);
         form.reset();
         Swal.fire("Successfully Registered!!");
+
         handleUpdateUser(name, photoURL);
       })
       .catch((error) => {
