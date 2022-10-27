@@ -128,7 +128,7 @@ const Login = () => {
               <p>
                 Forgot Passcode?
                 <button type="submit" onClick={resetThePassword}>
-                  <Link> Reset Your Password</Link>
+                  <Link className="text-blue-600"> Reset Your Password</Link>
                 </button>
               </p>
             </small>
